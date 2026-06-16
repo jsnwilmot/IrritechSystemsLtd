@@ -48,8 +48,11 @@
 
     <header class="site-header" aria-label="Site header">
       <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Irritech Sprinkler Systems Ltd home">
-          <img src="assets/irritech-logo-horizontal.png" alt="Irritech Sprinkler Systems Ltd" width="1896" height="592">
+        <a class="brand" href="index.html" aria-label="Irritech Sprinkler Systems Ltd home">
+          <picture class="brand-logo">
+            <source media="(max-width: 339px)" srcset="assets/img/brand/LOGO_ISSL_LogoStackedDarkBG.png" type="image/png">
+            <img src="assets/img/brand/LOGO_ISSL_LogoSidebySideDarkBG.png" alt="Irritech Sprinkler Systems Ltd" width="15774" height="5225" decoding="async">
+          </picture>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
           <span class="menu-toggle-lines" aria-hidden="true"></span>
@@ -329,7 +332,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="assets/irritech-logo-horizontal.png" alt="Irritech Sprinkler Systems Ltd" width="1896" height="592" loading="lazy">
+          <img src="assets/img/brand/LOGO_ISSL_LogoSidebySideDarkBG.png" alt="Irritech Sprinkler Systems Ltd" width="15774" height="5225" loading="lazy" decoding="async">
           <p>Built underground. Built to last.</p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -342,7 +345,16 @@
           <a href="tel:+14037953788">403-795-3788</a>
           <a href="mailto:irritechsprinklersltd@gmail.com">irritechsprinklersltd@gmail.com</a>
         </div>
-        <p class="copyright">&copy; 2026 Irritech Sprinkler Systems Ltd. All rights reserved.</p>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Irritech Sprinkler Systems Ltd. All rights reserved.</p>
+          <p class="site-credit" data-site-credit>
+            <a class="site-credit-link" data-site-credit-link href="https://design.roseandpaw.ca" target="_blank" rel="noopener noreferrer" aria-label="Website designed by Rose and Paw Digital Designs (opens in a new tab)">
+              <span class="site-credit-prefix">Website designed by</span>
+              <img class="site-credit-logo" data-site-credit-logo src="assets/img/brand/RPD_Logo.png" alt="" width="3070" height="3102" loading="lazy" decoding="async">
+              <span class="site-credit-name" data-site-credit-name>Rose &amp; Paw Digital Designs</span>
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
 

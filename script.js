@@ -1,4 +1,32 @@
 (function () {
+  var siteData = {
+    siteCredit: {
+      name: "Rose & Paw Digital Designs",
+      url: "https://design.roseandpaw.ca",
+      logo: "assets/img/brand/RPD_Logo.png"
+    }
+  };
+
+  var siteCreditLink = document.querySelector("[data-site-credit-link]");
+  var siteCreditLogo = document.querySelector("[data-site-credit-logo]");
+  var siteCreditName = document.querySelector("[data-site-credit-name]");
+
+  if (siteCreditLink && siteData.siteCredit) {
+    siteCreditLink.href = siteData.siteCredit.url;
+    siteCreditLink.setAttribute(
+      "aria-label",
+      "Website designed by " + siteData.siteCredit.name + " (opens in a new tab)"
+    );
+  }
+
+  if (siteCreditLogo && siteData.siteCredit) {
+    siteCreditLogo.src = siteData.siteCredit.logo;
+  }
+
+  if (siteCreditName && siteData.siteCredit) {
+    siteCreditName.textContent = siteData.siteCredit.name;
+  }
+
   var menuToggle = document.querySelector(".menu-toggle");
   var nav = document.getElementById("primary-nav");
   var form = document.getElementById("quote-form");

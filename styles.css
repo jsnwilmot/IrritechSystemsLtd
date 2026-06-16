@@ -134,9 +134,14 @@ textarea {
   min-height: 2.75rem;
 }
 
+.brand-logo {
+  display: block;
+}
+
 .brand img {
-  width: clamp(8rem, 36vw, 13.8rem);
+  width: clamp(8.5rem, 42vw, 10.4rem);
   height: auto;
+  object-fit: contain;
 }
 
 .menu-toggle {
@@ -252,6 +257,7 @@ textarea {
 .menu-toggle:focus-visible,
 .nav-links a:focus-visible,
 .header-call:focus-visible,
+.site-credit-link:focus-visible,
 .button:focus-visible,
 input:focus,
 select:focus,
@@ -806,9 +812,10 @@ textarea {
 }
 
 .footer-brand img {
-  width: min(15rem, 70vw);
+  width: clamp(11rem, 62vw, 14rem);
   height: auto;
   margin-bottom: 0.8rem;
+  object-fit: contain;
 }
 
 .footer-brand p,
@@ -838,6 +845,46 @@ textarea {
   color: #8dd95e;
 }
 
+.footer-bottom {
+  display: grid;
+  gap: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-dark);
+}
+
+.site-credit {
+  margin: 0;
+}
+
+.site-credit-link {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.site-credit-link:hover {
+  color: #8dd95e;
+}
+
+.site-credit-prefix {
+  font-weight: 600;
+}
+
+.site-credit-name {
+  font-weight: 700;
+}
+
+.site-credit-logo {
+  width: clamp(5rem, 26vw, 6.7rem);
+  height: auto;
+  object-fit: contain;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -847,6 +894,10 @@ textarea {
 @media (min-width: 42rem) {
   .header-inner {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .brand img {
+    width: clamp(10.8rem, 30vw, 13rem);
   }
 
   .header-call {
@@ -943,8 +994,13 @@ textarea {
     align-items: start;
   }
 
-  .copyright {
+  .footer-bottom {
     grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }
 
@@ -961,7 +1017,7 @@ textarea {
   }
 
   .brand img {
-    width: 15rem;
+    width: clamp(13.2rem, 19vw, 16rem);
   }
 
   .menu-toggle {
@@ -1050,7 +1106,7 @@ textarea {
   }
 
   .brand img {
-    width: 7.1rem;
+    width: clamp(8.2rem, 43vw, 9.4rem);
   }
 
   .header-call {
@@ -1073,5 +1129,20 @@ textarea {
     grid-template-columns: 3rem 1fr;
     padding-left: 0.85rem;
     padding-right: 0.85rem;
+  }
+}
+
+@media (max-width: 21.2rem) {
+  .brand img {
+    width: 5.4rem;
+  }
+
+  .menu-toggle {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+
+  .site-credit-link {
+    font-size: 0.82rem;
   }
 }
