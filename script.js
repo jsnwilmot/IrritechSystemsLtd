@@ -1,6 +1,35 @@
 (function () {
+  var menuToggle = document.querySelector(".menu-toggle");
+  var nav = document.getElementById("primary-nav");
   var form = document.getElementById("quote-form");
   var status = document.getElementById("form-status");
+
+  if (menuToggle && nav) {
+    function closeMenu() {
+      menuToggle.setAttribute("aria-expanded", "false");
+      nav.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+    }
+
+    menuToggle.addEventListener("click", function () {
+      var isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      nav.classList.toggle("is-open", !isOpen);
+      document.body.classList.toggle("menu-open", !isOpen);
+    });
+
+    nav.addEventListener("click", function (event) {
+      if (event.target && event.target.tagName === "A") {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+  }
 
   if (!form || !status) {
     return;
