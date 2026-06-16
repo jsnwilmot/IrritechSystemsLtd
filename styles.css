@@ -880,7 +880,7 @@ textarea {
 }
 
 .site-credit-logo {
-  width: clamp(5rem, 26vw, 6.7rem);
+  width: clamp(3.19rem, 16.58vw, 4.27rem);
   height: auto;
   object-fit: contain;
 }
