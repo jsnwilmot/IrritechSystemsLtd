@@ -1094,30 +1094,11 @@ textarea {
   }
 
   .process-connector span {
-    position: relative;
+    display: block;
     width: clamp(1.05rem, 1.4vw, 1.35rem);
     height: clamp(1.9rem, 2.8vw, 2.35rem);
-  }
-
-  .process-connector span::before,
-  .process-connector span::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: clamp(0.78rem, 1vw, 0.92rem);
-    height: 1.8px;
-    background: rgba(7, 27, 41, 0.44);
-    transform-origin: right center;
-  }
-
-  .process-connector span::before {
-    top: calc(50% - 0.28rem);
-    transform: rotate(38deg);
-  }
-
-  .process-connector span::after {
-    top: calc(50% + 0.28rem);
-    transform: rotate(-38deg);
+    background: rgba(7, 27, 41, 0.4);
+    clip-path: polygon(0 0, 42% 0, 100% 50%, 42% 100%, 0 100%, 58% 50%);
   }
 
   .showcase-copy {
